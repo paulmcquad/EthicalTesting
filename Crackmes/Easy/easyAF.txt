@@ -1,0 +1,28 @@
+// 476f64's easyAF
+//https://crackmes.one/crackme/5eae2d6633c5d47611746500
+
+Use Ghidra.
+
+Search > For Strings
+
+Minimum Length 2
+
+
+                             s_Pass                                          XREF[1]:     main:00101223(*)  
+        00102005 70 61 73        ds         "pass"
+                 73 00
+                             s_Enter_the_password:_0010200a                  XREF[1]:     main:0010123e(*)  
+        0010200a 45 6e 74        ds         "Enter the password: "
+                 65 72 20 
+                 74 68 65 
+                             s_Welldone!_0010201f                            XREF[1]:     main:0010127b(*)  
+        0010201f 57 65 6c        ds         "Welldone!"
+                 6c 64 6f 
+                 6e 65 21 00
+                             s_Nope                                          XREF[1]:     main:001012b2(*)  
+        00102029 4e 6f 70        ds         "Nope"
+                 65 00
+
+Create 2 Data > Strings : s_Pass and s_Nope
+
+Password:pass
