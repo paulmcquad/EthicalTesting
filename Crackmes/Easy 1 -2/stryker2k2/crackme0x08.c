@@ -2,31 +2,35 @@
 // https://www.youtube.com/watch?v=6p5Qviusskk
 
 
-// https://github.com/Maijin/radare2-workshop-2015/blob/master/IOLI-crackme/bin-linux/crackme0x07
+// https://github.com/Maijin/radare2-workshop-2015/blob/master/IOLI-crackme/bin-linux/crackme0x08
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 
+
 int dummy(uint input,char **argw)
 
 {
   int len;
   int counter;
-  int __result_strncmp = 1;
+  int LOL = 1;
   
   counter = 0;
   do {
     if (argw[counter] == (char *)0x0) {
       return 0;
     }
-    len = strncmp(argw[counter],"LOLO",3);/* Setup a EV .bashrc $printenv LOLO */
+                    /* Setup a EV .bashrc $printenv LOLO */
+    len = strncmp(argw[counter],"LOLO",3);
     counter++;
   } while (len != 0);
-  __result_strncmp = 1;
+  LOL = 1;
+                    /* __result_strncmp */
   return 1;
 }
+
 
 void parell(char *pass,char **argw)
 
@@ -34,15 +38,15 @@ void parell(char *pass,char **argw)
   int result;
   int counter;
   uint u_int;
-  int __result_strncmp = 1;
-
+  int LOL = 1;
+  
   sscanf(pass,"%d",&u_int);
-                    /*  Check a EV .bashrc $printenv LOLO  */
+                    /* Check a EV .bashrc $printenv LOLO */
   result = dummy(u_int,argw);
   if (result != 0) {
     for (counter = 0; counter < 10; counter++) {
       if ((u_int & 1) == 0) {
-        if (__result_strncmp == 1) {
+        if (LOL == 1) {
           printf("Password OK!\n");
         }
                     /* WARNING: Subroutine does not return */
@@ -53,12 +57,15 @@ void parell(char *pass,char **argw)
   return;
 }
 
+
 void IncorrectPassword(void)
+
 {
   printf("Password Incorrect!\n");
                     /* WARNING: Subroutine does not return */
   exit(0);
 }
+
 
 void check(char *pass,char **argw)
 
@@ -97,11 +104,14 @@ void check(char *pass,char **argw)
   return;
 }
 
+
+
 int main(int argc,char **argv,char **argw)
+
 {
   char pass [120];
   
-  printf("IOLI Crackme Level 0x07\n");
+  printf("IOLI Crackme Level 0x08\n");
   printf("Password: ");
   scanf("%s",pass);
   check(pass,argw);
