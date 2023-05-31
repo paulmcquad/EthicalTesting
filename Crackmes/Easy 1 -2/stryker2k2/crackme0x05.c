@@ -16,7 +16,7 @@ void parell(char *pass)
   uint counter;
   
   sscanf(pass,"%d",&counter);
-  if ((counter & 1) == 0) {
+  if ((counter & 1) == 0) { /* Bitwise AND */
     printf("Password OK!\n");
                     /* WARNING: Subroutine does not return */
     exit(0);
