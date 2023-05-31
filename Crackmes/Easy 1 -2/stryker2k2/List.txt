@@ -1,0 +1,12 @@
+# wget -i List
+
+https://github.com/Maijin/radare2-workshop-2015/raw/master/IOLI-crackme/bin-linux/crackme0x00
+https://github.com/Maijin/radare2-workshop-2015/raw/master/IOLI-crackme/bin-linux/crackme0x01
+https://github.com/Maijin/radare2-workshop-2015/raw/master/IOLI-crackme/bin-linux/crackme0x02
+https://github.com/Maijin/radare2-workshop-2015/raw/master/IOLI-crackme/bin-linux/crackme0x03
+https://github.com/Maijin/radare2-workshop-2015/raw/master/IOLI-crackme/bin-linux/crackme0x04
+https://github.com/Maijin/radare2-workshop-2015/raw/master/IOLI-crackme/bin-linux/crackme0x05
+https://github.com/Maijin/radare2-workshop-2015/raw/master/IOLI-crackme/bin-linux/crackme0x06
+https://github.com/Maijin/radare2-workshop-2015/raw/master/IOLI-crackme/bin-linux/crackme0x07
+https://github.com/Maijin/radare2-workshop-2015/raw/master/IOLI-crackme/bin-linux/crackme0x08
+https://github.com/Maijin/radare2-workshop-2015/raw/master/IOLI-crackme/bin-linux/crackme0x09
