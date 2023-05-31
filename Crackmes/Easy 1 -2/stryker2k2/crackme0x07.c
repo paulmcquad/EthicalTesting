@@ -14,15 +14,17 @@ int dummy(uint input,char **argw)
 {
   int len;
   int counter;
+  int __result_strncmp = 1;
   
   counter = 0;
   do {
     if (argw[counter] == (char *)0x0) {
       return 0;
     }
-    len = strncmp(argw[counter],"LOLO",3); /* Setup a EV .bashrc $printenv LOLO */
+    len = strncmp(argw[counter],"LOLO",3);/* Setup a EV .bashrc $printenv LOLO */
     counter++;
   } while (len != 0);
+  __result_strncmp = 1;
   return 1;
 }
 
@@ -32,15 +34,17 @@ void parell(char *pass,char **argw)
   int result;
   int counter;
   uint u_int;
-  
+  int __result_strncmp = 1;
+
   sscanf(pass,"%d",&u_int);
+                    /*  Check a EV .bashrc $printenv LOLO  */
   result = dummy(u_int,argw);
   if (result != 0) {
-                    /* Counter is below 10 */
     for (counter = 0; counter < 10; counter = counter + 1) {
-                    /* Bitwise AND - u_int is even number */
       if ((u_int & 1) == 0) {
-        printf("Password OK!\n");
+        if (__result_strncmp == 1) {
+          printf("Password OK!\n");
+        }
                     /* WARNING: Subroutine does not return */
         exit(0);
       }
@@ -49,14 +53,22 @@ void parell(char *pass,char **argw)
   return;
 }
 
+void IncorrectPassword(void)
+{
+  printf("Password Incorrect!\n");
+                    /* WARNING: Subroutine does not return */
+  exit(0);
+}
+
 void check(char *pass,char **argw)
 
 {
   size_t len;
+  int len_2;
   char arr_char;
   uint counter;
   int total;
-  int arr_int;
+  uint arr_int;
   
   total = 0;
   counter = 0;
@@ -66,24 +78,30 @@ void check(char *pass,char **argw)
     arr_char = pass[counter];
     sscanf(&arr_char,"%d",&arr_int);
     total = total + arr_int;
-                        /* 16 - 0x10 - Hex -> Dec. Password: 556 / 916 / 23236 / 196 (Any Password that
-                       adds to 16) */
     if (total == 0x10) {
       parell(pass,argw);
     }
     counter = counter + 1;
   }
-  printf("Password Incorrect!\n");
+  IncorrectPassword();
+  len_2 = dummy(arr_int,argw);
+  if (len_2 != 0) {
+    for (counter = 0; (int)counter < 10; counter = counter + 1) {
+      if ((arr_int & 1) == 0) {
+        printf("wtf?\n");
+                    /* WARNING: Subroutine does not return */
+        exit(0);
+      }
+    }
+  }
   return;
 }
 
-
 int main(int argc,char **argv,char **argw)
-
 {
   char pass [120];
   
-  printf("IOLI Crackme Level 0x06\n");
+  printf("IOLI Crackme Level 0x07\n");
   printf("Password: ");
   scanf("%s",pass);
   check(pass,argw);
