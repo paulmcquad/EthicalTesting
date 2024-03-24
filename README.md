@@ -5,6 +5,7 @@ EthicalTesting
 ## 01 - Information Gathering
 
 Gather as much interesting details before an attack.
+
 [+] Homework Time - Building a case:
 
 [+] Network Reconnaissance / Network Enumeration
