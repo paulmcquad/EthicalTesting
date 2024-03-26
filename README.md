@@ -9,9 +9,12 @@ Gather as much interesting details before an attack.
 
 ## DNS Analysis
 
-dnsenum
-dnsrecon
-fierce
+
+| Tools         | Version       |
+| ------------- |:-------------:|
+|[dnsenum](https://github.com/SparrowOchon/dnsenum2 "Dnsenum is a perl script that enumerates DNS information.")| v1.3.2 |
+|[dnsrecon](https://github.com/darkoperator/dnsrecon "DNS Enumeration Script")| v1.1.5 |
+|[fierce](https://github.com/mschwager/fierce "A DNS reconnaissance tool for locating non-contiguous IP space.")| v1.5.0|
 
 ## IDS/IPS Identification
 
