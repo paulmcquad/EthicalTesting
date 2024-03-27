@@ -13,13 +13,16 @@ Gather as much interesting details before an attack.
 | Tools         | Version       |
 | ------------- |:-------------:|
 |[dnsenum](https://github.com/SparrowOchon/dnsenum2 "Dnsenum is a perl script that enumerates DNS information.")| v1.3.2 |
+|[dnsmap](https://github.com/resurrecting-open-source-projects/dnsmap " Scan for subdomains using bruteforcing techniques") | v0.36 |
 |[dnsrecon](https://github.com/darkoperator/dnsrecon "DNS Enumeration Script")| v1.1.5 |
 |[fierce](https://github.com/mschwager/fierce "A DNS reconnaissance tool for locating non-contiguous IP space.")| v1.5.0|
 
 ## IDS/IPS Identification
 
-lbd
-wafw00f - webapp firewall tool
+| Tools         | Version       |
+| ------------- |:-------------:|
+|[lbd](https://gitlab.com/kalilinux/packages/lbd "load balancing detector")| v0.4|
+|[wafw00f](https://github.com/EnableSecurity/wafw00f "Web Application Firewall (WAF) Tool")| v2.2 | 
 
 ## Live Host Identification
 
